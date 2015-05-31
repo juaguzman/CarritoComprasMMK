@@ -1,13 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : May 30, 2015, 2:55:57 AM
-    Author     : JUANCARLOS
-*/
-
 #nav1
 {
     background: black;
@@ -22,17 +12,11 @@ and open the template in the editor.
 /*EN EL VIDEO HAY UN ERROR POR EL CUAL NO SE VISUALIZA EN GOOGLE CHROME,
 EL CÓDIGO A CONTINUACIÓN YA ESTA CORREGIDO*/
  
-header {
-	margin-top:10px;
-    width: 100%;
-    overflow: hidden;
-    height: 150px;
-    position: relative;
-}
+
  
 nav {
     top:-20px;
-    position: absolute;
+    position: relative;
     left:0;
     right:0;
 	margin:20px auto;
@@ -139,4 +123,25 @@ nav ul li a .cuarto {
  
 nav ul li a .quinto {
 	background:#37a4d9;
+}
+
+#banner
+{
+    margin: 0 auto;
+    background: black;
+    height:300px;
+    width:1000px
+}
+
+#log
+{
+    margin-left: 20px;
+    width:250px;
+    margin-top:20px;
+    
+}
+
+#navi
+{
+    margin-top: 2px;
 }

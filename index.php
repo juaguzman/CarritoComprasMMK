@@ -1,16 +1,21 @@
+<?php 
+session_start();
+include 'conexion.php';
+include 'conex.php';
+        $mysql = new conexioni();
+        $mysqli=$mysql->conctar();
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/estiloInicio.css" type="text/css" media="screen" />
-        <link rel="stylesheet" href="css/estiloHeader.css" type="text/css" media="screen" />
-        
+            
+       
+       
         <title></title>
     </head>
-    <header>
-        <?php include 'header.php'?>
-    </header>
+    <?php include './header.php';?>
     <body>
-        <div class="central" >
+         <div class="central" >
         <div id="izq">
             <img src="img/3.jpg"  />           
         </div> 
@@ -32,6 +37,8 @@
             <img src="img/samsung-ak-32j4300a.jpg"/>           
         </div>
         </div>
-        
     </body>
+        
+        
 </html>
+
