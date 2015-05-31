@@ -42,7 +42,33 @@
 
 #contenedor
 {
-    background:blue;
     width: 1000px;
     margin: 0 auto;
+}
+
+#izqp1
+{
+   float: left;
+       
+}
+#derp1
+{
+   margin-left: 500px; 
+}
+#izqp2
+{
+   float: left;
+       
+}
+#derp2
+{
+   margin-left: 500px; 
+}
+
+#fin
+{
+    margin-top: 15px;
+/*    margin: 0 auto;*/
+    
+    
 }

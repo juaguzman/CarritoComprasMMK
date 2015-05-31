@@ -38,8 +38,23 @@ include 'conex.php';
         <div id="derp">
             <img src="img/samsung-ak-32j4300a.jpg"/>           
         </div>
+        <div id="izqp1">
+            <img src="img/nevera.PNG"/>           
         </div>
+        <div id="derp1">
+            <img src="img/celular.PNG"/>           
+        </div>
+            <div id="izqp2">
+                <img src="img/lav.jpg"/>           
+        </div>
+        <div id="derp2">
+            <img src="img/sop.jpg"/>           
+        </div>
+        </div>
+            <div id="fin">
+                <img src="img/envios.PNG"/>
             </div>
+        </div>
     </body>
         
         

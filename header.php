@@ -20,7 +20,7 @@
 						 <?php } ?>
 					</ul>
 				</li>
-				<li><a href="#"><span class="tercero"><i class="icon icon-suitcase"></i></span>Servicios</a></li>
+                                <li><a href="servicios.php"><span class="tercero"><i class="icon icon-suitcase"></i></span>Servicios</a></li>
 				<li><a href="#"><span class="cuarto"><i class="icon icon-text"></i></span>Acerca de</a></li>
 				<li><a href="#"><span class="quinto"><i class="icon icon-mail"></i></span>Contacto</a></li>
                                  <li><a href="#"><span class="tercero"><i class="icon icon-suitcase"></i></span>Inicio sesion</a>
