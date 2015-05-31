@@ -1,5 +1,10 @@
 
 
+#central
+{
+    margin: 0 auto;
+}
+
 #izq
 {
     float: left;   
@@ -35,3 +40,9 @@
    margin-left: 500px; 
 }
 
+#contenedor
+{
+    background:blue;
+    width: 1000px;
+    margin: 0 auto;
+}

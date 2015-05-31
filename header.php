@@ -21,8 +21,12 @@
 				<li><a href="#"><span class="quinto"><i class="icon icon-mail"></i></span>Contacto</a></li>
                                  <li><a href="#"><span class="tercero"><i class="icon icon-suitcase"></i></span>Inicio sesion</a>
                                      <ul>
-                                         <li><a href="#">Usuario</a></li>
-                                         <li> <input type="text" name="desc" required></li>
+                                         <form>
+                                         <li><a href="#">Usuario:</a></li>
+                                         <li> <input type="text" name="usu" required></li>
+                                         <li><a href="#">Contraseña:</a></li>
+                                         <li> <input type="password" name="contra" required></li>
+                                         </form>
                                      </ul>  
                                  </li>
                                 <li><a href="#"><span class="cuarto"><i class="icon icon-text"></i></span>Carrito</a></li>

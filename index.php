@@ -9,13 +9,14 @@ include 'conex.php';
 <html>
     <head>
             
-       
+        <link rel="stylesheet" href="css/estiloInicio.css" type="text/css" media="screen" />
        
         <title></title>
     </head>
     <?php include './header.php';?>
     <body>
-         <div class="central" >
+        <div id="contenedor">
+         <div id="central" >
         <div id="izq">
             <img src="img/3.jpg"  />           
         </div> 
@@ -37,6 +38,7 @@ include 'conex.php';
             <img src="img/samsung-ak-32j4300a.jpg"/>           
         </div>
         </div>
+            </div>
     </body>
         
         
