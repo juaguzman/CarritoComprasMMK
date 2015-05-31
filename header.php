@@ -1,4 +1,6 @@
- <header>
+
+
+<header>
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
         <div id="banner">
             <img id="log" src="img/logo.png">
@@ -12,7 +14,7 @@
                                              <?php $result   = $mysqli->query("SELECT * FROM categorias"); ?>
                                             <?php  while ($campo = mysqli_fetch_object($result)) 
                                                 {  ?>
-						<li><a href="#"><?php echo $campo->nombreCat; ?></a></li>
+						<li><a href="catalogo.php?id=<?php echo $campo->idCat?>"><?php echo $campo->nombreCat; ?></a></li>
 						 <?php } ?>
 					</ul>
 				</li>
@@ -21,12 +23,14 @@
 				<li><a href="#"><span class="quinto"><i class="icon icon-mail"></i></span>Contacto</a></li>
                                  <li><a href="#"><span class="tercero"><i class="icon icon-suitcase"></i></span>Inicio sesion</a>
                                      <ul>
-                                         <form>
+                                         <form action="index.php">
                                          <li><a href="#">Usuario:</a></li>
                                          <li> <input type="text" name="usu" required></li>
                                          <li><a href="#">Contraseña:</a></li>
                                          <li> <input type="password" name="contra" required></li>
+                                         <li>   <input type="submit" name="submit" value="Entrar" class="bt_login" /></li>
                                          </form>
+                                        
                                      </ul>  
                                  </li>
                                 <li><a href="#"><span class="cuarto"><i class="icon icon-text"></i></span>Carrito</a></li>

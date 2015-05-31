@@ -1,5 +1,5 @@
 <?php
-class conexioni
+class conexion
 {
     public function conctar()
     {

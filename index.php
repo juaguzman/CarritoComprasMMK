@@ -1,9 +1,11 @@
 <?php 
-session_start();
+
 include 'conexion.php';
 include 'conex.php';
-        $mysql = new conexioni();
+        $mysql = new conexion();
         $mysqli=$mysql->conctar();
+        
+          
 ?>
 <!DOCTYPE html>
 <html>
