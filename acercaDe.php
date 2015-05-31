@@ -2,7 +2,7 @@
 session_start();
 include 'conexion.php';
 include 'conex.php';
-        $mysql = new conexioni();
+        $mysql = new conexion();
         $mysqli=$mysql->conctar();
 ?>
 
@@ -16,7 +16,7 @@ include 'conex.php';
     <body>
         <h1>Acerca de nosotros</h1>
         <div id="texto">
-            <font face="Comic Sans MS">
+            <font face="Helvetica">
         <br>
         ¡Bienvenido a MINI MARKET! tu principal portal de internet para compras
         <br>
