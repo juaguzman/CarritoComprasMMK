@@ -1,4 +1,6 @@
+<?php 
 
+?>
 
 <header>
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />

@@ -3,8 +3,7 @@
 include 'conexion.php';
 include 'conex.php';
         $mysql = new conexion();
-        $mysqli=$mysql->conctar();
-        
+        $mysqli=$mysql->conctar();        
           
 ?>
 <!DOCTYPE html>

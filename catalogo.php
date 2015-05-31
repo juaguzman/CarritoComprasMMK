@@ -57,6 +57,7 @@ and open the template in the editor.
                      <input type="image" name="imageField" id="imageField" src="img/comprar.gif">
               <input name="nombre" type="hidden" id="nombre" value="<?php echo $campo->nombre; ?>">
               <input name="precio" type="hidden" id="precio" value="<?php echo $campo->presioVenta; ?>">
+              <input name="categoria" type="hidden" id="precio" value="<?php echo $campo->Categorias_idCat; ?>">
               <input name="cantidad" type="hidden" id="cantidad" value="1">
             </form> </th>
                 </tr>
