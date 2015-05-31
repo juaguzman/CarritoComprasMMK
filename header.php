@@ -1,11 +1,45 @@
 <?php 
-
+session_start();
+require_once './conexion.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();   
+if(!isset($_SESSION["usuario"]))
+{
+   if (isset($_POST['usu']))
+   {
+       $nickname=$_POST['usu'];
+       $contrasena=$_POST['contra'];
+       $result1   = $mysqli->query("SELECT * FROM usuarios WHERE nombreUsu = '$nickname' and contrasena='$contrasena' ");
+       
+       $num = mysqli_num_rows($result1);
+       
+       if($num<=0)
+       {
+          echo '<script language="javascript">alert("usuario ivalido"); window.location="index.php"; </script>'; 
+       }
+ else {
+            $result1   = $mysqli->query("SELECT * FROM usuarios WHERE nombreUsu = '$nickname' and contrasena='$contrasena' ");
+           $campo1=  mysqli_fetch_array($result1);
+           $_SESSION['idusuario']=$campo1['idusuario'];
+           $_SESSION["usuario"]=$nickname;
+           echo '<script language="javascript">alert("Bienvenido" ); window.location="index.php"; </script>'; 
+       }
+   }
+}
+ else {
+     
+    $_SESSION["usuario"];
+}
 ?>
 
 <header>
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
         <div id="banner">
             <img id="log" src="img/logo.png">
+            <div id="prue">
+            <p> <?php if (!isset($_SESSION["usuario"])) {
+			echo "Invitado";}else {echo $_SESSION["usuario"];} ?> </p>
+            </div>
         </div>
         <div id="navi">
          <nav>
@@ -25,7 +59,7 @@
 				<li><a href="#"><span class="quinto"><i class="icon icon-mail"></i></span>Contacto</a></li>
                                  <li><a href="#"><span class="tercero"><i class="icon icon-suitcase"></i></span>Inicio sesion</a>
                                      <ul>
-                                         <form action="index.php">
+                                         <form  action="index.php" method="post">
                                          <li><a href="#">Usuario:</a></li>
                                          <li> <input type="text" name="usu" required></li>
                                          <li><a href="#">Contraseña:</a></li>
@@ -36,7 +70,11 @@
                                      </ul>  
                                  </li>
                                 <li><a href="#"><span class="cuarto"><i class="icon icon-text"></i></span>Carrito</a></li>
+                                <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span>Hola <?php if (!isset($_SESSION["usuario"])) {
+			echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a></li>
+                               
 			</ul>
 		</nav>
+           
             </div>
     </header>

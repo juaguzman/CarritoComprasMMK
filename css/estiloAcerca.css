@@ -13,13 +13,13 @@ margin: 0 auto;
 }
 #texto
 {
+    margin: 0 auto;
     border-radius: 16px 16px 16px 16px;
     -moz-border-radius: 16px 16px 16px 16px;
     -webkit-border-radius: 16px 16px 16px 16px;
     border: 4px solid #424142;
-    width: 500px;
-    margin: 0 auto;
-    margin-left: 250px;
+    width: 500px;    
+    margin-left: 650px;
     margin-top: 10px;
     padding: 10px;
     

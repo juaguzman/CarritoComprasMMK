@@ -16,6 +16,7 @@ include 'conex.php';
     </head>
     <?php include './header.php';?>
     <body>
+        
         <div id="contenedor">
          <div id="central" >
         <div id="izq">

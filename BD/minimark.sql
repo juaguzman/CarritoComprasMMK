@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-05-2015 a las 19:04:21
+-- Tiempo de generación: 01-06-2015 a las 00:08:02
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -49,13 +49,40 @@ INSERT INTO `categorias` (`idCat`, `nombreCat`) VALUES
 CREATE TABLE IF NOT EXISTS `productos` (
 `idProducto` int(11) NOT NULL,
   `nombre` varchar(45) NOT NULL,
-  `descripcion` varchar(200) NOT NULL,
+  `descripcion` varchar(400) NOT NULL,
   `cantidad` int(3) NOT NULL,
-  `presioVenta` varchar(45) NOT NULL,
+  `presioVenta` double(10,2) NOT NULL,
   `foto` varchar(45) NOT NULL,
-  `PresioCompra` varchar(45) NOT NULL,
+  `PresioCompra` double(10,2) NOT NULL,
   `Categorias_idCat` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`idProducto`, `nombre`, `descripcion`, `cantidad`, `presioVenta`, `foto`, `PresioCompra`, `Categorias_idCat`) VALUES
+(6, 'tv 32 Samsung', 'Pulgadas: 32 <br> Medida Diagonal: 80Cm <br> Sintonizador Digital DVB-T2 <br> Resolución: HD <br> Contraste: MEGA <br> Entradas: HDMI USB COMPONENTE <br> Velocidad Respuesta: 120 CMR <br> Otros: SMART TV - MODO FUTBOL- DISEÑO DELGADO', 20, 750000.00, 'tv.jpg', 600000.00, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+`idusuario` int(11) NOT NULL,
+  `nombreUsu` varchar(45) NOT NULL,
+  `contrasena` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`idusuario`, `nombreUsu`, `contrasena`, `email`) VALUES
+(1, 'juan', '123e', 'juan@hotmail.com');
 
 --
 -- Índices para tablas volcadas
@@ -74,6 +101,12 @@ ALTER TABLE `productos`
  ADD PRIMARY KEY (`idProducto`), ADD UNIQUE KEY `nombre_UNIQUE` (`nombre`), ADD KEY `fk_Productos_Categorias_idx` (`Categorias_idCat`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+ ADD PRIMARY KEY (`idusuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -86,7 +119,12 @@ MODIFY `idCat` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `idProducto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- Restricciones para tablas volcadas
 --
