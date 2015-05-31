@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/estiloInicio.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="css/estiloHeader.css" type="text/css" media="screen" />
+        
         <title></title>
     </head>
     <header>
