@@ -1,0 +1,39 @@
+h1
+{
+  text-align: CENTER;
+  font-family: fantasy; 
+  border-radius: 29px 29px 29px 29px;
+    -moz-border-radius: 29px 29px 29px 29px;
+-webkit-border-radius: 29px 29px 29px 29px;
+border: 0px solid #000000;
+background:#e8e3d8;
+width: 1000px;
+height: 50px;
+margin: 0 auto;
+}
+
+#texto
+{
+    border-radius: 16px 16px 16px 16px;
+    -moz-border-radius: 16px 16px 16px 16px;
+    -webkit-border-radius: 16px 16px 16px 16px;
+    border: 4px solid #424142;
+    width: 500px;
+    margin: 0 auto;
+    margin-left: 250px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-top-width:1px;border-bottom-width:1px;}
+.tg .tg-i0og{color:#000000}
+.tg .tg-walu{color:#3166ff}
+.tg {
+    text-align: center;
+}
+table
+{
+    margin-left: 89px;
+}
+

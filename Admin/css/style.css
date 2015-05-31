@@ -20,9 +20,9 @@ nav {
     position: relative;
     left:0;
     right:0;
-    margin:20px auto;
-    max-width:1000px;
-    width:90;
+	margin:20px auto;
+	max-width:1000px;
+	width:90;
       
 }
  
@@ -169,4 +169,3 @@ label
 	font-weight: bold;
 	
 }
-
