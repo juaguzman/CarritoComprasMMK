@@ -1,0 +1,41 @@
+body
+{
+    width: 300px;
+    height: 150px;
+}
+
+#izq
+{
+    float: left;   
+}
+#der
+{
+   margin-left: 450px;
+   margin-top: 10px;
+   padding: 5px;
+}
+#der1
+{
+   margin-left: 450px;
+   margin-top: 6px; 
+}
+#der2
+{
+   margin-left: 450px;
+   margin-top: 20px;
+}
+
+.pro
+{
+      margin-top: 10px;
+}
+#izqp
+{
+   float: left;
+       
+}
+#derp
+{
+   margin-left: 500px; 
+}
+
