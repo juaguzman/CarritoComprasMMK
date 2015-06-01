@@ -1,0 +1,54 @@
+<?php 
+session_start();
+include '../conexion.php';
+include '../conex.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
+        
+$sql ="SELECT * FROM productos";
+$consulta=  mysql_query($sql);
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/estiloProductos.css" type="text/css" media="screen" />
+        <title>Prodcutos</title>
+    </head>
+    <?php include 'header.php';?>
+    <body>
+        <h1>Productos</h1>
+        <br>
+        <br>
+        <table class="tg">
+        <tr>
+            <th class="tg-rvy5" colspan="10"><a href="agregarPoducto.php">Agregar producto </a></th>
+        </tr>
+        <tr>
+            <td class="tg-1ttd">idProducto</td>
+            <td class="tg-1ttd">Nombre</td>
+            <td class="tg-1ttd">Descripcion</td>
+            <td class="tg-1ttd">Cantidad</td>
+            <td class="tg-1ttd">Precio de venta</td>
+            <td class="tg-1ttd">foto</td>
+            <td class="tg-1ttd">Precio de compra</td>
+            <td class="tg-1ttd">Categoria</td>
+            <td class="tg-1ttd" colspan="2">Acciones</td>
+        </tr>
+        <?php while($campos=mysql_fetch_object($consulta)){?>
+        <tr>
+            <td class="tg-031e"><?php echo $campos->idProducto; ?></td>
+            <td class="tg-031e"><?php echo $campos->nombre; ?></td>
+            <td class="tg-031e"><?php echo $campos->descripcion; ?></td>
+            <td class="tg-031e"><?php echo $campos->cantidad; ?></td>
+            <td class="tg-031e"><?php echo $campos->presioVenta; ?></td>
+            <td class="tg-031e"><?php echo $campos->foto; ?></td>
+            <td class="tg-031e"><?php echo $campos->PresioCompra; ?></td>
+            <td class="tg-031e"><?php echo $campos->Categorias_idCat; ?></td>
+            <td class="tg-031e"><a class="ac" href="modificarProducto.php" onclick="modificarProducto(<?php echo $campos->idProducto; ?>)" >Modificar</a></td>
+            <td class="tg-031e"></td>
+        </tr>
+        <?php }?>
+        </table>
+    </body>
+</html>
