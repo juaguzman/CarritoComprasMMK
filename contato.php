@@ -14,6 +14,7 @@ include 'conex.php';
     </head>
     <?php include './header.php';?>
     <body>
+       
         <h1>Contatenos</h1>
         <div id="texto">
             <font face="Helvetica">
@@ -101,6 +102,7 @@ include 'conex.php';
             <br>
             </font>
         </div>
+       
     </body>
     
 </html>

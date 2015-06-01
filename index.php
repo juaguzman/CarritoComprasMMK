@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include 'conexion.php';
 include 'conex.php';
         $mysql = new conexion();

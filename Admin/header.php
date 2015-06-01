@@ -22,7 +22,7 @@ if(!isset($_SESSION["usuario"]))
            $campo1=  mysqli_fetch_array($result1);
            $_SESSION['idusuario']=$campo1['idusuario'];
            $_SESSION["usuario"]=$nickname;
-           echo '<script language="javascript">alert("Bienvenido" ); window.location="index.php"; </script>'; 
+           echo '<script language="javascript">alert("Bienvenido " ); window.location="index.php"; </script>'; 
        }
    }
 }
@@ -71,7 +71,9 @@ if(!isset($_SESSION["usuario"]))
                                  </li>
                                 <li><a href="#"><span class="cuarto"><i class="icon icon-text"></i></span>Carrito</a></li>
                                 <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span>Hola <?php if (!isset($_SESSION["usuario"])) {
-			echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a></li>
+			echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a>
+                                   
+                                </li>
                                
 			</ul>
 		</nav>

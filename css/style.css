@@ -170,3 +170,18 @@ label
 	
 }
 
+.bt_cssn
+{
+    width: 74px;
+    background: transparent url(../img/bt_login.png) no-repeat 0 0;
+    margin-left: 900px;   
+    color: white;
+    display: block;
+	float: right;	
+	height: 24px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	font-weight: bold; 
+}
+

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 require_once './conexion.php';
         $mysql = new conexion();
         $mysqli=$mysql->conctar();   
@@ -36,6 +36,7 @@ if(!isset($_SESSION["usuario"]))
       <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
         <div id="banner">
             <img id="log" src="img/logo.png">
+            <img id="bann" src="img/banner.png">
             <div id="prue">
             <p> <?php if (!isset($_SESSION["usuario"])) {
 			echo "Invitado";}else {echo $_SESSION["usuario"];} ?> </p>
@@ -69,9 +70,15 @@ if(!isset($_SESSION["usuario"]))
                                         
                                      </ul>  
                                  </li>
-                                <li><a href="#"><span class="cuarto"><i class="icon icon-text"></i></span>Carrito</a></li>
+                                 <li><a href="carrito.php"><span class="cuarto"><i class="icon icon-text"></i></span>Carrito</a></li>
                                 <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span>Hola <?php if (!isset($_SESSION["usuario"])) {
-			echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a></li>
+			echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a>
+                                    <ul>
+                                        <form  action="logout.php" method="post">
+                                        <li><input type="submit" name="submit" value="salir" class="bt_cssn" width="800px" /></li>
+                                        </form>
+                                    </ul>
+                                </li>
                                
 			</ul>
 		</nav>

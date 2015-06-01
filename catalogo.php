@@ -30,8 +30,15 @@ and open the template in the editor.
     </head>
     <?php include './header.php';?>
     <body>
+        <div id="titulo">
+            <?php $result1 = $mysqli->query("SELECT * FROM categorias where idCat=".$id);?>
+            <?php while ($nom=mysqli_fetch_object($result1)){ ?>
+            <h1><?php echo $nom->nombreCat?></h1>
+             <?php } ?>
+        </div>
         <div id="bdy">
          <?php $result   = $mysqli->query("SELECT * FROM productos where Categorias_idCat=".$id); ?>
+            <div id="pro">
               <?php  while ($campo = mysqli_fetch_object($result)) 
                                                 {  ?>
         <table id="catal">
@@ -52,19 +59,26 @@ and open the template in the editor.
                 <tr>
                     <th class="pr2">Valor: <?php echo $campo->presioVenta?> </th>
                 </tr>
-                 <tr>
-                     <th>  <form name="form1" method="post" action="carrito.php">
-                     <input type="image" name="imageField" id="imageField" src="img/comprar.gif">
+                
+                     <form name="form1" method="post" action="carrito.php">
+                         <tr>  <th class="pr2"><input name="cantidad" type="number" id="cantidad" value="1" height="50px"></th> </tr>
+                      <tr><th> <input type="image" name="imageField" id="imageField" src="img/comprar.gif">
               <input name="nombre" type="hidden" id="nombre" value="<?php echo $campo->nombre; ?>">
               <input name="precio" type="hidden" id="precio" value="<?php echo $campo->presioVenta; ?>">
               <input name="categoria" type="hidden" id="precio" value="<?php echo $campo->Categorias_idCat; ?>">
-              <input name="cantidad" type="hidden" id="cantidad" value="1">
+              <input name="cantDisp" type="hidden" id="precio" value="<?php echo $campo->cantidad; ?>">
+             
             </form> </th>
+                </tr>
+                 <tr>
+                     <th>  
+                     
                 </tr>
 
             </tbody>
         </table>
          <?php } ?>
+                </div>
             </div>
     </body>
 </html>

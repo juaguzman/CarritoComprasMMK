@@ -13,7 +13,7 @@ and open the template in the editor.
 #bdy
 {
  margin: 0 auto;
- background: red;
+ 
  width: 1000px;
 }
 
@@ -38,3 +38,25 @@ and open the template in the editor.
     float: left;
     margin-left: 10px;
  }
+ 
+ #pro
+ {
+   
+     width:800px;
+     height: 800px;
+     margin: 0 auto;
+ }
+ 
+ h1
+{
+  text-align: CENTER;
+  font-family: fantasy; 
+  border-radius: 29px 29px 29px 29px;
+-moz-border-radius: 29px 29px 29px 29px;
+-webkit-border-radius: 29px 29px 29px 29px;
+border: 0px solid #000000;
+background:#e8e3d8;
+width: 1000px;
+height: 50px;
+margin: 0 auto;
+}
