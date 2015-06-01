@@ -86,8 +86,9 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <link rel="stylesheet" href="css/styleresumen.css" type="text/css" media="screen" />
         <meta charset="UTF-8">
-        <title></title>
+        <title>Carrito de compras || MMK</title>
     </head>
     <?php include './header.php'; ?>
     <body>
