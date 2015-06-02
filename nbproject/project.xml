@@ -6,8 +6,11 @@
             <name>carritoComprasMMK</name>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>CANTIDAD</word>
+            <word>CATEGORIA</word>
             <word>Cerrar</word>
             <word>compra</word>
+            <word>Direccion</word>
             <word>MMK</word>
             <word>ventas</word>
         </spellchecker-wordlist>

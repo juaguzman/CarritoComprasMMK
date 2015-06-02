@@ -50,10 +50,18 @@ if(isset($_SESSION['carrito'])){
     <input type="email"  name="email" id="email" size="50" required></td>
   <td>&nbsp;</td>
 </tr>
+<tr align="center" style="background-color:#fff; color:#000">
+  <td height="39">&nbsp;</td>
+  <td align="right">Direccion:</td>
+  <td><label for="direccion"></label>
+      <input type="text"  name="direccion" id="email" size="50" required></td>
+  <td>&nbsp;</td>
+</tr>
 <tr align="center" style="background-color:#008fbe; color:#fff">
     <td width="27%" height="28" >PRODUCTO</td>
     <td width="18%" >PRECIO</td>
     <td width="37%" >CANTIDAD</td>
+    
     <td width="18%" >TOTAL</td>
   </tr>
   <?php
@@ -68,7 +76,7 @@ for($i=0;$i<=count($compras)-1;$i++){
   <tr align="center">
     <td><?php echo $compras[$i]['nombre']; ?></td>
     <td><?php echo $compras[$i]['precio']; ?></td>
-    <td><?php echo $compras[$i]['cantidad'];?></td>
+    <td><?php echo $compras[$i]['cantidad'];?></td>    
     <td>
 	<?php echo $compras[$i]['cantidad'] * $compras[$i]['precio'];?>
     </td>
@@ -93,6 +101,7 @@ for($i=0;$i<=count($compras)-1;$i++){
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td align="right">&nbsp;</td>
+    <input type="hidden" name="total" value="<?php echo $total?>"> </input>
     <td><input type="submit" name="button" id="button" value="Enviar pedido"></td>
   </tr>
     </table>
