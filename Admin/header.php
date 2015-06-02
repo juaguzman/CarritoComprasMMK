@@ -41,6 +41,7 @@ if(!isset($_SESSION["admins"]))
 			echo "Invitado";}else {echo $_SESSION["admins"];} ?> </p>
             </div>
         </div>
+    
         <div id="navi">
          <nav>
             <ul>
