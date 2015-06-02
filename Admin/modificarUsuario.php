@@ -58,7 +58,7 @@ include '../conex.php';
                 <td class="tg-031e"><input type="email" name="ema" required value="<?php echo $campos->email;?>"></td>
             </tr>
             <tr>
-                <td class="tg-s6z2" colspan="2"><input type="submit" name="op" value="Modificar Producto"></td>
+                <td class="tg-s6z2" colspan="2"><input type="submit" name="op" value="Modificar Usuario"></td>
             </tr>
             
         </table>

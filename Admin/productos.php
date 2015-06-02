@@ -48,8 +48,10 @@ $consulta= $mysqli->query($sql);
             <td class="tg-031e"><?php echo $campos->foto; ?></td>
             <td class="tg-031e"><?php echo $campos->PresioCompra;?></td>
             <td class="tg-031e"><?php echo $campos->Categorias_idCat;?></td>
-            <td class="tg-031e"><a class="ac"href="#"  onclick="modificarProducto(<?php echo $campos->idProducto; ?>)">Modificar</a></td>
-            <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarProducto(<?php echo $campos->idProducto; ?>)">Eliminar</a></td>
+            <td class="tg-031e"><a class="ac"href="#"  
+            onclick="modificarProducto(<?php echo $campos->idProducto; ?>)">
+            <img src="../img/modificar.png" width="30px" height="30px"/></a></td>
+            <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarProducto(<?php echo $campos->idProducto; ?>)"><img src="../img/remove_event_256.png" width="30px" height="30px"/></a></td>
         </tr>
         <?php }?>
         

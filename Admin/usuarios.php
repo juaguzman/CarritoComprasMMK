@@ -38,8 +38,8 @@ $consulta= $mysqli->query($sql);
     <td class="tg-031e"><?php echo $campos->nombreUsu; ?></td>
     <td class="tg-031e"><?php echo $campos->contrasena; ?></td>
     <td class="tg-031e"><?php echo $campos->email; ?></td>
-    <td class="tg-031e"><a class="ac"href="#"  onclick="modificarUsuario(<?php echo $campos->idusuario; ?>)">Modificar</a></td>
-    <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarUsuario(<?php echo $campos->idusuario; ?>)">Eliminar</a></td>
+    <td class="tg-031e"><a class="ac"href="#"  onclick="modificarUsuario(<?php echo $campos->idusuario; ?>)"><img src="../img/modificar.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarUsuario(<?php echo $campos->idusuario; ?>)"><img src="../img/remove_event_256.png" width="30px" height="30px"/></a></td>
   </tr>
   <?php }?>
 </table

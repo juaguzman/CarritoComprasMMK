@@ -29,3 +29,20 @@ function modificarUsuario(pos)
     else
         return false;
 }
+
+
+function eliminarCategoria(pos)
+{
+    if(confirm("Desea borrar el registro?"))
+        location.href="eliminarCategoria.php?id="+pos;
+    else
+        return false;
+}
+
+function modificarCategoria(pos)
+{
+    if(confirm("Desea cambiar los datos"))
+        location.href="modificarCategoria.php?id="+pos;
+    else
+        return false;
+}
