@@ -6,13 +6,15 @@ include '../conex.php';
         $mysqli=$mysql->conctar();
         
 $sql ="SELECT * FROM productos";
-$consulta=  mysql_query($sql);
+$consulta= $mysqli->query($sql);
+
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="css/estiloProductos.css" type="text/css" media="screen" />
+        <script src="sropys/script.js"></script>
         <title>Prodcutos</title>
     </head>
     <?php include 'header.php';?>
@@ -35,7 +37,7 @@ $consulta=  mysql_query($sql);
             <td class="tg-1ttd">Categoria</td>
             <td class="tg-1ttd" colspan="2">Acciones</td>
         </tr>
-        <?php while($campos=mysql_fetch_object($consulta)){?>
+        <?php while($campos=mysqli_fetch_object($consulta)){?>
         <tr>
             <td class="tg-031e"><?php echo $campos->idProducto; ?></td>
             <td class="tg-031e"><?php echo $campos->nombre; ?></td>
@@ -43,12 +45,14 @@ $consulta=  mysql_query($sql);
             <td class="tg-031e"><?php echo $campos->cantidad; ?></td>
             <td class="tg-031e"><?php echo $campos->presioVenta; ?></td>
             <td class="tg-031e"><?php echo $campos->foto; ?></td>
-            <td class="tg-031e"><?php echo $campos->PresioCompra; ?></td>
-            <td class="tg-031e"><?php echo $campos->Categorias_idCat; ?></td>
-            <td class="tg-031e"><a class="ac" href="modificarProducto.php" onclick="modificarProducto(<?php echo $campos->idProducto; ?>)" >Modificar</a></td>
-            <td class="tg-031e"></td>
+            <td class="tg-031e"><?php echo $campos->PresioCompra;?></td>
+            <td class="tg-031e"><?php echo $campos->Categorias_idCat;?></td>
+            <td class="tg-031e"><a class="ac"href="#"  onclick="modificarProducto(<?php echo $campos->idProducto; ?>)">Modificar</a></td>
+            <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarProducto(<?php echo $campos->idProducto; ?>)">Eliminar</a></td>
         </tr>
         <?php }?>
+        
+        
         </table>
     </body>
 </html>

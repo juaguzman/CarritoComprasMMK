@@ -30,7 +30,7 @@ if ($_FILES["imge"]["error"] > 0){
         $resultado = move_uploaded_file($_FILES['imge']['tmp_name'], $ruta);
 	if ($resultado){
             echo "el archivo ha sido movido exitosamente";
-            $sql ="INSERT INTO  productos VALUES('','$nombre','$descripcion',0,0,'$foto',0,'$categoria')";
+            $sql ="INSERT INTO  productos VALUES('','$nombre','$descripcion',$cantidad,$precioVenta,'$foto',$precioCompra,'$categoria')";
             $consulta=  mysql_query($sql);
             if ($consulta){
                 echo "<script>
@@ -101,7 +101,18 @@ if ($_FILES["imge"]["error"] > 0){
   </tr>
   <tr>
     <td class="tg-031e">Categoria</td>
-    <td class="tg-031e"><input type="text" name="car" required></td>
+    <td class="tg-031e"><?php $result = $mysqli->query("SELECT * FROM categorias"); ?>
+                               
+                            <select name="car" >
+                                <option value="0">Seleccione una categoria</option>
+                                <?php  while ($campo = mysqli_fetch_object($result)) 
+                                     {  ?>
+                                        
+                                        <option value="<?php echo $campo->idCat; ?>"><?php echo $campo->nombreCat ?></option>
+                                    <?php } ?>
+                                        
+                            </select> 
+    </td>
   </tr>
   <tr>
     <th class="tg-031e" colspan="2"><input type="submit" name="op" value="Agregar Producto"></th>

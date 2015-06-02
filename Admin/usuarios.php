@@ -6,7 +6,7 @@ include '../conex.php';
         $mysqli=$mysql->conctar();
         
 $sql ="SELECT * FROM usuarios";
-$consulta=  mysql_query($sql);
+$consulta= $mysqli->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ $consulta=  mysql_query($sql);
     <td class="tg-qj4c">Email</td>
     <td class="tg-qj4c" colspan="2">Acciones</td>
   </tr>
-  <?php while($campos=mysql_fetch_object($consulta)){?>
+  <?php while($campos=mysqli_fetch_object($consulta)){?>
   <tr>
     <td class="tg-031e"><?php echo $campos->idusuario; ?></td>
     <td class="tg-031e"><?php echo $campos->nombreUsu; ?></td>
