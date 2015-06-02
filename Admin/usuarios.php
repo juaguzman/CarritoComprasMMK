@@ -13,6 +13,7 @@ $consulta= $mysqli->query($sql);
 <html>
     <head>
         <link rel="stylesheet" href="css/estiloUsuario.css" type="text/css" media="screen" />
+        <script src="sropys/script.js"></script>
         <title>Administrador de Usuarios</title>
     </head>
     <?php include 'header.php';?>
@@ -22,7 +23,7 @@ $consulta= $mysqli->query($sql);
         <br>
         <table class="tg">
   <tr>
-    <th class="tg-nmn5" colspan="6">Agregar Usuario</th>
+      <th class="tg-nmn5" colspan="6"><a href="agregarUsuario.php">Agregar Usuario</a></th>
   </tr>
   <tr>
     <td class="tg-qj4c">Id Usuario</td>
@@ -37,8 +38,8 @@ $consulta= $mysqli->query($sql);
     <td class="tg-031e"><?php echo $campos->nombreUsu; ?></td>
     <td class="tg-031e"><?php echo $campos->contrasena; ?></td>
     <td class="tg-031e"><?php echo $campos->email; ?></td>
-    <td class="tg-031e"></td>
-    <td class="tg-031e"></td>
+    <td class="tg-031e"><a class="ac"href="#"  onclick="modificarUsuario(<?php echo $campos->idusuario; ?>)">Modificar</a></td>
+    <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarUsuario(<?php echo $campos->idusuario; ?>)">Eliminar</a></td>
   </tr>
   <?php }?>
 </table

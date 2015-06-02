@@ -13,3 +13,19 @@ function modificarProducto(pos)
     else
         return false;
 }
+
+function eliminarUsuario(pos)
+{
+    if(confirm("Desea borrar el registro?"))
+        location.href="eliminarUsuario.php?id="+pos;
+    else
+        return false;
+}
+
+function modificarUsuario(pos)
+{
+    if(confirm("Desea cambiar los datos"))
+        location.href="modificarUsuario.php?id="+pos;
+    else
+        return false;
+}
