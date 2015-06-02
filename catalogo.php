@@ -47,7 +47,7 @@ and open the template in the editor.
                     <th class="pr2">Nombre: <?php echo $campo->nombre?> </th>
                 </tr>
                  <tr class="pr">
-                     <th>  <img src="imgProductos/<?php echo $campo->foto?>" ></th>
+                     <th>  <img src="imgProductos/<?php echo $campo->foto?>" width="300px" ></th>
                 </tr>
                
                 <tr >

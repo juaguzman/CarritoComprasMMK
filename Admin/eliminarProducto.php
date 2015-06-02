@@ -15,7 +15,7 @@ unlink($ruta.$fotoN);
 
 $sql = "DELETE from productos WHERE idProducto=$id";
 
-$consulta=  @mysqli_query($sql);
+$consulta=$mysqli->query($sql);
 
 if (!$sql) 
     {
@@ -27,7 +27,7 @@ if (!$sql)
         }
         header("Location:productos.php");
         return $consulta;
-?>
 
 
-<img src="../imgProductos//"
+
+

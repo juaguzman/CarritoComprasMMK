@@ -22,6 +22,7 @@ $consulta= $mysqli->query($sql);
         <h1>Productos</h1>
         <br>
         <br>
+        <div id="prod">
         <table class="tg">
         <tr>
             <th class="tg-rvy5" colspan="10"><a href="agregarPoducto.php">Agregar producto </a></th>
@@ -54,5 +55,6 @@ $consulta= $mysqli->query($sql);
         
         
         </table>
+            </div>
     </body>
 </html>
