@@ -7,7 +7,6 @@ $sql ="SELECT * FROM usuarios where idusuario=$id ";
 $consulta= $mysqli->query($sql);
 $campos=  mysqli_fetch_object($consulta);        
 
-
 $sql = "DELETE fROM usuarios where idusuario=$id ";
 
 $consulta=$mysqli->query($sql);

@@ -42,8 +42,8 @@ $consulta=  mysql_query($sql);
   <tr>
     <td class="tg-031e"><?php echo $campos->idCat; ?></td>
     <td class="tg-031e"><?php echo $campos->nombreCat; ?></td>
-    <td class="tg-031e"></td>
-    <td class="tg-031e"></td>
+    <td class="tg-031e"><a class="ac"href="#"  onclick="modificarCategoria(<?php echo $campos->idusuario; ?>)"><img src="../img/modificar.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarCategoria(<?php echo $campos->idusuario; ?>)"><img src="../img/remove_event_256.png" width="30px" height="30px"/></a></td>
   </tr>
   <?php }?>
 </table>
