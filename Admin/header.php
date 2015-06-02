@@ -3,13 +3,13 @@
 require_once '../conexion.php';
         $mysql = new conexion();
         $mysqli=$mysql->conctar();   
-if(!isset($_SESSION["usuario"]))
+if(!isset($_SESSION["admins"]))
 {
-   if (isset($_POST['usu']))
+   if (isset($_POST['adm']))
    {
-       $nickname=$_POST['usu'];
+       $nickname=$_POST['adm'];
        $contrasena=$_POST['contra'];
-       $result1   = $mysqli->query("SELECT * FROM usuarios WHERE nombreUsu = '$nickname' and contrasena='$contrasena' ");
+       $result1   = $mysqli->query("SELECT * FROM admin WHERE nombreAdmi = '$nickname' and contrasena='$contrasena' ");
        
        $num = mysqli_num_rows($result1);
        
@@ -18,17 +18,17 @@ if(!isset($_SESSION["usuario"]))
           echo '<script language="javascript">alert("usuario ivalido"); window.location="index.php"; </script>'; 
        }
  else {
-            $result1   = $mysqli->query("SELECT * FROM usuarios WHERE nombreUsu = '$nickname' and contrasena='$contrasena' ");
+            $result1   = $mysqli->query("SELECT * FROM admin WHERE nombreAdmi = '$nickname' and contrasena='$contrasena' ");
            $campo1=  mysqli_fetch_array($result1);
-           $_SESSION['idusuario']=$campo1['idusuario'];
-           $_SESSION["usuario"]=$nickname;
-           echo '<script language="javascript">alert("Bienvenido " ); window.location="index.php"; </script>'; 
+           $_SESSION['idadmi']=$campo1['idAdmin'];
+           $_SESSION["admins"]=$nickname;
+           echo '<script language="javascript">alert("Bienvenido administrador " ); window.location="index.php"; </script>'; 
        }
    }
 }
  else {
      
-    $_SESSION["usuario"];
+    $_SESSION["admins"];
 }
 ?>
 
@@ -37,8 +37,8 @@ if(!isset($_SESSION["usuario"]))
         <div id="banner">
             <img id="log" src="../img/logo.png">
             <div id="prue">
-            <p> <?php if (!isset($_SESSION["usuario"])) {
-			echo "Invitado";}else {echo $_SESSION["usuario"];} ?> </p>
+            <p> <?php if (!isset($_SESSION["admins"])) {
+			echo "Invitado";}else {echo $_SESSION["admins"];} ?> </p>
             </div>
         </div>
         <div id="navi">
@@ -53,15 +53,15 @@ if(!isset($_SESSION["usuario"]))
                 <ul>
                     <form  action="index.php" method="post">
                     <li><a href="#">Usuario:</a></li>
-                    <li> <input type="text" name="usu" required></li>
+                    <li> <input type="text" name="adm" required></li>
                     <li><a href="#">Contraseña:</a></li>
                     <li><input type="password" name="contra" required></li>
                     <li><input type="submit" name="submit" value="Entrar" class="bt_login" /></li>
                     </form>
                 </ul>  
             </li>
-            <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span>Hola <?php if (!isset($_SESSION["usuario"])) {
-            echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a></li>
+            <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span><?php if (!isset($_SESSION["admins"])) {
+            echo "Invalido";}else {echo $_SESSION["admins"];} ?></a></li>
                                
             </ul>
         </nav>

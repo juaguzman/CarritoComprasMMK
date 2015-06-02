@@ -1,5 +1,7 @@
 <?php 
 session_start();
+if(isset($_SESSION['admins']))
+{
 include '../conexion.php';
 include '../conex.php';
         $mysql = new conexion();
@@ -7,6 +9,13 @@ include '../conex.php';
         
 $sql ="SELECT * FROM categorias";
 $consulta=  mysql_query($sql);
+}
+ else {
+    echo "<script>
+                alert('usuario invalido');
+                location.href='index.php';
+                </script>";
+}
 ?>
 
 <!DOCTYPE html>
