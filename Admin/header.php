@@ -62,8 +62,7 @@ if(!isset($_SESSION["admins"]))
                 </ul>  
             </li>
             <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span><?php if (!isset($_SESSION["admins"])) {
-            echo "Invalido";}else {echo $_SESSION["admins"];} ?></a></li>
-                               
+            echo "Invalido";}else {echo $_SESSION["admins"];} ?></a></li>           
             </ul>
         </nav>
     </div>
