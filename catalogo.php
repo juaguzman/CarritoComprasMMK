@@ -67,6 +67,7 @@ and open the template in the editor.
               <input name="precio" type="hidden" id="precio" value="<?php echo $campo->presioVenta; ?>">
               <input name="categoria" type="hidden" id="precio" value="<?php echo $campo->Categorias_idCat; ?>">
               <input name="cantDisp" type="hidden" id="precio" value="<?php echo $campo->cantidad; ?>">
+              <input name="idprod" type="hidden" id="precio" value="<?php echo $campo->idProducto; ?>">
              
             </form> </th>
                 </tr>

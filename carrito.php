@@ -11,6 +11,7 @@ if ( isset($_SESSION['carrito']) || isset($_POST['nombre']))
 		$cantidad=$_POST['cantidad'];
                 $categoria=$_POST['categoria'];
                  $cant_dis=$_POST["cantDisp"];
+                 $idprod=$_POST['idprod'];
 		$duplicado=-1;
 			for($i=0;$i<=count($compras)-1;$i++){
 				if($nombre==$compras[$i]['nombre']){
@@ -32,7 +33,7 @@ if($duplicado != -1){
 }else {
      if($cantidad<=$cant_dis)
         {
-		$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad, "categoria"=>$categoria);
+		$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad, "categoria"=>$categoria, "idprod"=>$idprod);
         }
          else
         {
@@ -49,9 +50,10 @@ else
 	$cantidad=$_POST['cantidad'];
         $categoria=$_POST['categoria'];
         $cant_dis=$_POST["cantDisp"];
+        $idprod=$_POST['idprod'];
         if($cantidad<=$cant_dis)
         {
-	$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad,"categoria"=>$categoria);
+	$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad,"categoria"=>$categoria, "idprod"=>$idprod);
         }
         else
         {
@@ -101,6 +103,7 @@ and open the template in the editor.
     <td width="18%">TOTAL</td>
   </tr>
   <?php
+  
   if(isset($_SESSION['carrito'])){
 	  $total=0;
 

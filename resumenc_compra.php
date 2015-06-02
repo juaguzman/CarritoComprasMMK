@@ -76,7 +76,8 @@ for($i=0;$i<=count($compras)-1;$i++){
   <tr align="center">
     <td><?php echo $compras[$i]['nombre']; ?></td>
     <td><?php echo $compras[$i]['precio']; ?></td>
-    <td><?php echo $compras[$i]['cantidad'];?></td>    
+    <td><?php echo $compras[$i]['cantidad'];?></td>
+    
     <td>
 	<?php echo $compras[$i]['cantidad'] * $compras[$i]['precio'];?>
     </td>

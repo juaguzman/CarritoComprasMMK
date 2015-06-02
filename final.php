@@ -11,6 +11,7 @@ if(isset($_SESSION['carrito'])){
    $total = $_POST['total'];
    $email=$_POST['email'];
    $direccion=$_POST['direccion'];
+    $factura= rand(0,99999999999)."_".rand(0,99999999999); 
 
 }
 
@@ -39,7 +40,7 @@ and open the template in the editor.
                 </tr >
                  <tr align="center" style="background-color:#008fbe; color:#fff">
                      <td colspan="2">Direccion: <?php echo $direccion ?></td>
-                     <td  colspan="2">Distibuidor: Minimarket Online</td>
+                     <td  colspan="2">Factura N°: <?php echo $factura ?> </td>
                 </tr>
             </thead>
             <br>
@@ -96,7 +97,9 @@ for($i=0;$i<=count($compras)-1;$i++){
             </form>
             <form action="venta.php" method="post" id="enviar">
                 <input type="submit" name="button" id="button" value="Enviar pedido">
-                <input type="hidden" name="button" id="button" value="<?php echo $total?>">
+                <input type="hidden" name="total" id="button" value="<?php echo $total?>">
+                <input type="hidden" name="factu" id="button" value="<?php echo $factura?>">
+                <input type="hidden" name="direc" id="button" value="<?php echo $direccion?>">
             </form>
         </div>
         
