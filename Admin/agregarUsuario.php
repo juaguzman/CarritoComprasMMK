@@ -3,8 +3,7 @@ include '../conexion.php';
 include '../conex.php';
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
-$sql ="SELECT * FROM usuarios";
-$consulta=  mysql_query($sql);
+
 
 if(isset($_POST['op']))
 {
@@ -12,7 +11,7 @@ $nombreUsu = $_POST['nomU'];
 $contrasena = $_POST['cont'];
 $email =$_POST['ema'];
 
-$sql ="INSERT INTO  usuarios VALUES('','$nombreUsu','$contrasena',$email)";
+$sql ="INSERT INTO usuarios(nombreUsu, contrasena, email) VALUES('$nombreUsu', '$contrasena', '$email')";
 $consulta=  mysql_query($sql);
 if ($consulta)
 {
