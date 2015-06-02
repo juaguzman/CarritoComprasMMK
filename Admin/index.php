@@ -11,11 +11,21 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>
+        <link rel="stylesheet" href="css/styleIndex.css" type="text/css" media="screen" />
     </head>
      <?php include './header.php';?>
     <body>
+        <div>
         <?php
-        // put your code here
+        if(isset($_SESSION['admins']))
+        {
+            ?>
+        
+     <?php  }
+     else{
         ?>
+        <img id="inde" src="../img/error403.png">
+     <?php }?>
+        </div>
     </body>
 </html>
