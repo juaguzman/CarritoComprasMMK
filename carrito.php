@@ -12,6 +12,7 @@ if ( isset($_SESSION['carrito']) || isset($_POST['nombre']))
                 $categoria=$_POST['categoria'];
                  $cant_dis=$_POST["cantDisp"];
                  $idprod=$_POST['idprod'];
+                 $idcat=$_POST['idcat'];
 		$duplicado=-1;
 			for($i=0;$i<=count($compras)-1;$i++){
 				if($nombre==$compras[$i]['nombre']){
@@ -28,16 +29,16 @@ if($duplicado != -1){
         }
           else
         {
-              echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="catalogo.php?id=1";</script>'; 
+              echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="catalogo.php?id='.$idcat.'";</script>'; 
         }
 }else {
      if($cantidad<=$cant_dis)
         {
-		$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad, "categoria"=>$categoria, "idprod"=>$idprod);
+		$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad, "categoria"=>$categoria, "idprod"=>$idprod, "cantDisp"=>$cant_dis);
         }
          else
         {
-               echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="catalogo.php?id=1";</script>'; 
+               echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="catalogo.php?id='.$idcat.'";</script>'; 
         }
 }
 				}
@@ -51,13 +52,14 @@ else
         $categoria=$_POST['categoria'];
         $cant_dis=$_POST["cantDisp"];
         $idprod=$_POST['idprod'];
+        $idcat=$_POST['idcat'];
         if($cantidad<=$cant_dis)
         {
-	$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad,"categoria"=>$categoria, "idprod"=>$idprod);
+	$compras[]=array("nombre"=>$nombre,"precio"=>$precio,"cantidad"=>$cantidad,"categoria"=>$categoria, "idprod"=>$idprod, "cantDisp"=>$cant_dis);
         }
         else
         {
-             echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="catalogo.php?id=1";</script>'; 
+             echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="catalogo.php?id='.$idcat.'";</script>'; 
              
         }
 }
@@ -67,7 +69,16 @@ if(isset($_POST['cantidadactualizada'])){
 	if($contador_cant<1){
 		$compras[$id]=NULL;
 	}else{
+            $cant_dis=$compras[$id]['cantDisp'];
+             if($contador_cant<=$cant_dis)
+             {
 		$compras[$id]['cantidad']=$contador_cant;
+             }
+              else
+        {
+             echo '<script language="javascript">alert("no existen sufusientes unidades disponibles" ); window.location="carrito.php";</script>'; 
+             
+        }
 		}
 }
 if(isset($_POST['id2'])){
