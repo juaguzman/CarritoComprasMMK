@@ -41,7 +41,7 @@ else
     <td class="tg-qj4c">Fecha</td>
     <td class="tg-qj4c">Valor total</td>
     <td class="tg-qj4c">Direccion</td>
-    <td class="tg-qj4c" colspan="3">Acciones</td>
+    <td class="tg-qj4c" >Ver</td>
   </tr>
   <?php while($campos=mysqli_fetch_object($consulta)){?>
   <tr>
@@ -49,9 +49,7 @@ else
     <td class="tg-031e"><?php echo $campos->fecha; ?></td>
     <td class="tg-031e"><?php echo $campos->valorTot; ?></td>
     <td class="tg-031e"><?php echo $campos->direccion; ?></td>
-    <td class="tg-031e"><a class="ac"href="#"  onclick="modificarUsuario(<?php echo $campos->idusuario; ?>)"><img src="../img/modificar.png" width="30px" height="30px"/></a></td>
-    <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarUsuario(<?php echo $campos->idusuario; ?>)"><img src="../img/remove_event_256.png" width="30px" height="30px"/></a></td>
-    <td class="tg-031e"><a class="ac"href="compras.php?id=<?php echo $campos->idusuario; ?>"><img src="../img/iconoCarroCompras.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac"href="compras.php?id=<?php echo $campos->idusuario; ?>"><img src="../img/iconoVer.png" width="30px" height="30px"/></a></td>
   </tr>
   <?php }?>
 </table

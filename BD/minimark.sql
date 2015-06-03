@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2015 a las 09:23:09
+-- Tiempo de generación: 03-06-2015 a las 06:57:27
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
 --
 
 INSERT INTO `admin` (`idAdmin`, `nombreAdmi`, `contrasena`, `email`) VALUES
+(123456789, 'ROOT', 'mysql', 'ROOT@mmk.com'),
 (1085277182, 'ricardo', '789f', 'ricardi@gmail.com');
 
 -- --------------------------------------------------------
@@ -133,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
 --
 
 INSERT INTO `productos` (`idProducto`, `nombre`, `descripcion`, `cantidad`, `presioVenta`, `foto`, `PresioCompra`, `Categorias_idCat`) VALUES
-(6, 'tv 34 Samsung', 'Pulgadas: 32 <br> Medida Diagonal: 80Cm <br> Sintonizador Digital DVB-T2 <br> Resoluciï¿½n: HD <br> Contraste: MEGA <br> Entradas: HDMI USB COMPONENTE <br> Velocidad Respuesta: 120 CMR <br> Otros: SMART TV - MODO FUTBOL- DISEï¿½O DELGADO">', -1, 750000.00, '07_29_21.JPEG', 600000.00, 2),
+(6, 'tv 34 Samsung', 'Pulgadas: 32 <br> Medida Diagonal: 80Cm <br> Sintonizador Digital DVB-T2 <br> Resoluciï¿½n: HD <br> Contraste: MEGA <br> Entradas: HDMI USB COMPONENTE <br> Velocidad Respuesta: 120 CMR <br> Otros: SMART TV - MODO FUTBOL- DISEï¿½O DELGADO">">">">', 100, 800000.00, 'imgProductostv32.jpg', 600000.00, 2),
 (9, 'tv 45 LG', 'tvgrande <br> muy bonito', 45, 800000.00, 'imgProductostv32.jpg', 700000.00, 2);
 
 -- --------------------------------------------------------
@@ -154,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`idusuario`, `nombreUsu`, `contrasena`, `email`) VALUES
-(1, 'juan', '123e', 'juan@hotmail.com'),
+(1, 'juan', '1234e', 'juan@hotmail.com'),
 (2, 'camilo', '456a', 'camilo@hotmail.com');
 
 --
