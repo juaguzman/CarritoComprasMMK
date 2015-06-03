@@ -36,6 +36,8 @@ and open the template in the editor.
             <h1><?php echo $nom->nombreCat?></h1>
              <?php } ?>
         </div>
+        <br>
+        <br>
         <div id="bdy">
          <?php $result   = $mysqli->query("SELECT * FROM productos where Categorias_idCat=".$id); ?>
             <div id="pro">
@@ -51,7 +53,7 @@ and open the template in the editor.
                 </tr>
                
                 <tr >
-                    <th class="pr2">Descripcion: <?php echo $campo->descripcion?> </th>
+                    <th class="pr2"><a id="votar" href="#"  onclick= ventana=window.open('descripcion.php?id=<?php echo $campo->idProducto; ?>','ventana','width=640,height=300,scrollbars=NO,accesskey=""menubar=NO,resizable=NO,titlebar=NO,status=NO');return false>Ver descripcion</a></th>
                 </tr>
                  <tr>
                      <th class="pr2">Cantidad disponibe: <?php echo $campo->cantidad?> </th>
