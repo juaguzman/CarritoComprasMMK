@@ -105,7 +105,7 @@ include '../conex.php';
   </tr>
   <tr>
     <td class="tg-031e">Descripcion</td>
-    <td class="tg-031e"><textarea name="des" required ><?php echo $campos->descripcion;?>"></textarea></td>
+    <td class="tg-031e"><textarea name="des" required ><?php echo $campos->descripcion;?></textarea></td>
   </tr>
   <tr>
     <td class="tg-031e">Cantidad</td>

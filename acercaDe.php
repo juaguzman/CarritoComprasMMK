@@ -57,5 +57,5 @@ include 'conex.php';
         </font>
         </div>
     </body>
-    
+    <?php include './footer.php';?>
 </html>
