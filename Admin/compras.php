@@ -1,6 +1,7 @@
 <?php 
 session_start();
  $id=$_GET['id'];
+
 if(isset($_SESSION['admins']))
 {
 include '../conexion.php';
@@ -51,7 +52,7 @@ else
     <td class="tg-031e"><?php echo $campos->fecha; ?></td>
     <td class="tg-031e"><?php echo $campos->valorTot; ?></td>
     <td class="tg-031e"><?php echo $campos->direccion; ?></td>
-    <td class="tg-031e"><a class="ac"href="listaCompra.php?id=<?php echo $campos->idfactura; ?>"><img src="../img/iconoVer.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac"href="listaCompra.php?id=<?php echo $campos->idfactura; ?>&tot=<?php echo $campos->valorTot;?>"><img src="../img/iconoVer.png" width="30px" height="30px"/></a></td>
   </tr>
   <?php }?>
 </table
