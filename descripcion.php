@@ -1,5 +1,13 @@
 <?php
-
+        include './conexion.php';
+        $mysql = new conexion();
+        $mysqli=$mysql->conctar();
+      
+        
+if( isset($_GET['id']))
+{
+    $id = $_GET['id'];
+}
 
 ?>
 <!DOCTYPE html>
