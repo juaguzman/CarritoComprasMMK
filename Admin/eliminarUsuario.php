@@ -2,16 +2,17 @@
 include '../conex.php';
         $mysql = new conexion();
         $mysqli=$mysql->conctar();
+        
 $id=$_GET['id'];
-$sql ="SELECT * FROM usuarios where idusuario=$id ";
-$consulta= $mysqli->query($sql);
-$campos=  mysqli_fetch_object($consulta);        
 
-$sql = "DELETE fROM usuarios where idusuario=$id ";
+      
 
-$consulta=$mysqli->query($sql);
 
-if (!$sql) 
+$sql1 = "DELETE FROM usuarios where idusuario=$id";
+
+$consulta=$mysqli->query($sql1);
+
+if (!$$consulta) 
     {
     $consulta.="Error Eliminanda la sugerencia en la base de datos: " . mysqli_error();
     } 

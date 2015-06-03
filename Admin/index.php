@@ -20,7 +20,7 @@ and open the template in the editor.
         if(isset($_SESSION['admins']))
         {
             ?>
-            <img id="inde" src="../img/seo.jpg">
+            <img id="inde" src="../img/seo.jpg" width="800px">
      <?php  }
      else{
         ?>

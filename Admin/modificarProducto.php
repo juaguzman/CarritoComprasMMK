@@ -24,14 +24,22 @@ include '../conex.php';
     $foto = $_FILES['imge']['name'];
     $precioCompra =$_POST['preC'];
     $categoria = $_POST['car'];
-    if(isset($_FILES['imge']['name']))
+    
+    if($_FILES['imge']['name']!=NULL)
     {
      unlink($ruta.$fotoN);   
     }
     
     if ($_FILES["imge"]["error"] > 0)
     {
-        echo "ha ocurrido un error";
+         $query = "update productos set nombre='$nombre', descripcion='$descripcion',"
+         . "cantidad='$cantidad',presioVenta='$precioVenta',"
+         . "PresioCompra='$precioCompra',Categorias_idCat='$categoria' "
+         . " WHERE idProducto=$id";
+     
+        $mysqli->query($query) or die('Error al procesar consulta: ' . mysql_error());
+        echo 'Porducto modificada';
+        header('Location:productos.php'); 
     }
     else {
         $permitidos = array("image/jpg", "image/jpeg", "image/gif", "image/png");
