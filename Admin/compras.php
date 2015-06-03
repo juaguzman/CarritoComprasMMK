@@ -10,7 +10,7 @@ include '../conex.php';
   
        
         
-$sql ="SELECT * FROM compras where idusuario=".$id;
+$sql ="select compras.idfactura as 'idfactura', compras.fecha as 'fecha', compras.valorTot as 'valorTot', compras.direccion as'direccion', compras.idusuario as 'idusuario', usuarios.nombreUsu as 'nombreUsu' from compras, usuarios where compras.idusuario = usuarios.idusuario and compras.idusuario =".$id;
 $consulta= $mysqli->query($sql);
 }
 else 
@@ -35,8 +35,9 @@ else
         <br>
         <br>
         <table class="tg">
-  
+    
   <tr>
+      <td class="tg-qj4c">Comprador</td>
     <td class="tg-qj4c">Factura n°</td>
     <td class="tg-qj4c">Fecha</td>
     <td class="tg-qj4c">Valor total</td>
@@ -45,11 +46,12 @@ else
   </tr>
   <?php while($campos=mysqli_fetch_object($consulta)){?>
   <tr>
+    <td class="tg-031e"><?php echo $campos->nombreUsu; ?></td>
     <td class="tg-031e"><?php echo $campos->idfactura; ?></td>
     <td class="tg-031e"><?php echo $campos->fecha; ?></td>
     <td class="tg-031e"><?php echo $campos->valorTot; ?></td>
     <td class="tg-031e"><?php echo $campos->direccion; ?></td>
-    <td class="tg-031e"><a class="ac"href="compras.php?id=<?php echo $campos->idusuario; ?>"><img src="../img/iconoVer.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac"href="listaCompra.php?id=<?php echo $campos->idfactura; ?>"><img src="../img/iconoVer.png" width="30px" height="30px"/></a></td>
   </tr>
   <?php }?>
 </table
