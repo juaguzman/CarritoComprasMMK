@@ -74,9 +74,15 @@ if(!isset($_SESSION["usuario"]))
                                 <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span>Hola <?php if (!isset($_SESSION["usuario"])) {
 			echo "Invitado";}else {echo $_SESSION["usuario"];} ?></a>
                                     <ul>
+                                        <?php if(isset($_SESSION["usuario"])) {?>
                                         <form  action="logout.php" method="post">
                                         <li><input type="submit" name="submit" value="salir" class="bt_cssn" width="800px" /></li>
                                         </form>
+                                        <?php } else {?>
+                                        <form  action="agregarUsuario.php" method="post">
+                                        <li><input type="submit" name="submit" value="Registrar" class="bt_cssn" width="800px" /></li>
+                                        </form>
+                                        <?php }?>
                                     </ul>
                                 </li>
                                
