@@ -93,5 +93,5 @@ else
                 <td class="tg-yzpx" colspan="2"><input type="submit" name="op" value="Agregar Usuairo"></td>
             </tr>
         </table>
-    </body>   
+    </body>   <?php include './footer.php';?>
 </html>

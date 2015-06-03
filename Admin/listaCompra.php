@@ -62,5 +62,7 @@ else
       <td colspan="2" class="tg-qj4c" ><?php echo $tot; ?></td> 
   </tr>
 </table
+
     </body>
+<?php include './footer.php';?>
 </html>

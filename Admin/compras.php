@@ -57,4 +57,5 @@ else
   <?php }?>
 </table
     </body>
+    <?php include './footer.php';?>
 </html>

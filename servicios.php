@@ -32,4 +32,5 @@ include 'conex.php';
             <div id="img1"> <img src="img/servicios/servicios5.PNG" width="950px"/> </div>
         </div>
     </body>
+    <?php include './footer.php';?>
 </html>

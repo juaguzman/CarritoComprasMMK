@@ -54,4 +54,5 @@ include '../conex.php';
             </tr>
         </table>
     </body>   
+    <?php include './footer.php';?>
 </html>

@@ -48,4 +48,5 @@ if ($consulta)
             </tr>
         </table>
     </body>   
+    <?php include './footer.php';?>
 </html>
