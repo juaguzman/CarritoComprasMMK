@@ -22,6 +22,7 @@ $consulta=  mysql_query($sql);
 <html>
     <head>
         <link rel="stylesheet" href="css/estiloCategoria.css" type="text/css" media="screen" />
+         <script src="sropys/script.js"></script>
         <title>Administrador de categorias</title>
     </head>
     <?php include 'header.php';?>
@@ -31,7 +32,7 @@ $consulta=  mysql_query($sql);
         <br>
         <table class="tg">
   <tr>
-    <th class="tg-n0zm" colspan="4">Agregar Categoria</th>
+      <th class="tg-nmn5" colspan="4"><a href="agregarCategoria.php">Agregar Categoria</a></th>
   </tr>
   <tr>
     <td class="tg-wy3v">Id Categoria</td>
@@ -42,8 +43,8 @@ $consulta=  mysql_query($sql);
   <tr>
     <td class="tg-031e"><?php echo $campos->idCat; ?></td>
     <td class="tg-031e"><?php echo $campos->nombreCat; ?></td>
-    <td class="tg-031e"><a class="ac"href="#"  onclick="modificarCategoria(<?php echo $campos->idCat; ?>)"><img src="../img/modificar.png" width="30px" height="30px"/></a></td>
-    <td class="tg-031e"><a class="ac"href="#"  onclick="eliminarCategoria(<?php echo $campos->idCat; ?>)"><img src="../img/remove_event_256.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac" onclick="modificarCategoria(<?php echo $campos->idCat; ?>)"><img src="../img/modificar.png" width="30px" height="30px"/></a></td>
+    <td class="tg-031e"><a class="ac" onclick="eliminarCategoria(<?php echo $campos->idCat; ?>)"><img src="../img/remove_event_256.png" width="30px" height="30px"/></a></td>
   </tr>
   <?php }?>
 </table>

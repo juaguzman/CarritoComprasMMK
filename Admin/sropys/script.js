@@ -42,6 +42,7 @@ function eliminarCategoria(pos)
 function modificarCategoria(pos)
 {
     if(confirm("Desea cambiar los datos"))
+        
         location.href="modificarCategoria.php?id="+pos;
     else
         return false;
