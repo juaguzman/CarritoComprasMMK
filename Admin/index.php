@@ -28,5 +28,6 @@ and open the template in the editor.
      <?php }?>
         </div>
     </body>
-    <?php include './footer.php';?>
+     <br>
+    <div id="foot"><?php include './footer.php';?></div>
 </html>

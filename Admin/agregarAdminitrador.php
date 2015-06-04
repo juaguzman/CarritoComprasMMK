@@ -64,5 +64,6 @@ if ($consulta)
 </table>
        </form> 
     </body>
+     <br>
      <div id="foot"><?php include './footer.php';?></div>
 </html>

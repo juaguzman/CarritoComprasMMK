@@ -58,6 +58,7 @@ if ($consulta)
                 <td class="tg-yzpx" colspan="2"><input type="submit" name="op" value="Agregar Usuairo"></td>
             </tr>
         </table>
-    </body>   
+    </body> 
+     <br>
      <div id="foot"><?php include './footer.php';?></div>
 </html>

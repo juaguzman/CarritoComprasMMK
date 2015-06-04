@@ -59,5 +59,6 @@ $consulta= $mysqli->query($sql);
         </table>
             </div>
     </body>
+     <br>
      <div id="foot"><?php include './footer.php';?></div>
 </html>

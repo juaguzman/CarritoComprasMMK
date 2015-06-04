@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["usuario"])){
-    header("location:nuevo_usuario.php?nologin=false");
+    header("location:agregarUsuario.php");
     
 }
 $_SESSION["usuario"];
