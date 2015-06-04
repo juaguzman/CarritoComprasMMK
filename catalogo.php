@@ -12,7 +12,7 @@ if( isset($_GET['id']))
 
         
         
-      
+      $idcat=$id;
 }
 ?>
 
@@ -36,6 +36,8 @@ and open the template in the editor.
             <h1><?php echo $nom->nombreCat?></h1>
              <?php } ?>
         </div>
+        <br>
+        <br>
         <div id="bdy">
          <?php $result   = $mysqli->query("SELECT * FROM productos where Categorias_idCat=".$id); ?>
             <div id="pro">
@@ -51,7 +53,7 @@ and open the template in the editor.
                 </tr>
                
                 <tr >
-                    <th class="pr2">Descripcion: <?php echo $campo->descripcion?> </th>
+                    <th class="pr2"><a id="votar" href="descripcion.php?id=<?php echo $campo->idProducto; ?>&idc=<?php echo $idcat; ?>"  >Ver descripcion</a></th>
                 </tr>
                  <tr>
                      <th class="pr2">Cantidad disponibe: <?php echo $campo->cantidad?> </th>
@@ -68,7 +70,7 @@ and open the template in the editor.
               <input name="categoria" type="hidden" id="precio" value="<?php echo $campo->Categorias_idCat; ?>">
               <input name="cantDisp" type="hidden" id="precio" value="<?php echo $campo->cantidad; ?>">
               <input name="idprod" type="hidden" id="precio" value="<?php echo $campo->idProducto; ?>">
-             
+              <input name="idcat" type="hidden" id="precio" value="<?php echo $idcat; ?>">
             </form> </th>
                 </tr>
                  <tr>
@@ -82,4 +84,5 @@ and open the template in the editor.
                 </div>
             </div>
     </body>
+    <?php include './footer.php';?>
 </html>
