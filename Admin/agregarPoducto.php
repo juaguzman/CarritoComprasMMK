@@ -120,4 +120,5 @@ if ($_FILES["imge"]["error"] > 0){
 </table>   
         </form>
     </body>
+     <div id="foot"><?php include './footer.php';?></div>
 </html>

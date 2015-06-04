@@ -61,4 +61,5 @@ and open the template in the editor.
         </table>
             </div>
     </body>
+     <div id="foot"><?php include './footer.php';?></div>
 </html>

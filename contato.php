@@ -104,5 +104,5 @@ include 'conex.php';
         </div>
        
     </body>
-    
+     <div id="foot"><?php include './footer.php';?></div>
 </html>

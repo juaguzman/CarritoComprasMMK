@@ -50,3 +50,11 @@ border: 4px solid #424142;
    margin: 0 auto;
    padding: 13px;
 }
+
+#foot
+{
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}

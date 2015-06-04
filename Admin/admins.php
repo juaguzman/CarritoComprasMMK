@@ -49,4 +49,5 @@ $consulta=  mysql_query($sql);
          <img id="inde" src="../img/error403.png">
         <?php }?>
     </body>
+     <div id="foot"><?php include './footer.php';?></div>
 </html>

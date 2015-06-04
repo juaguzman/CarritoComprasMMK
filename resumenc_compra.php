@@ -112,4 +112,5 @@ for($i=0;$i<=count($compras)-1;$i++){
 
     </div>
 </body>
+     <div id="foot"><?php include './footer.php';?></div>
 </html>

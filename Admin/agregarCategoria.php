@@ -47,5 +47,6 @@ if ($consulta)
             <td class="tg-jfdm" colspan="2"><input type="submit" name="op" value="Agregar Categoria"></td>
             </tr>
         </table>
-    </body>   
+    </body> 
+     <div id="foot"><?php include './footer.php';?></div>
 </html>

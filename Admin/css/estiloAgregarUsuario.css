@@ -21,3 +21,11 @@ margin: 0 auto;
 table{
     margin: 0 auto;
 }
+
+#foot
+{
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}

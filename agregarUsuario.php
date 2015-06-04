@@ -94,5 +94,5 @@ else
             </tr>
         </table>
     </body> 
-    <?php include './footer.php';?>
+     <div id="foot"><?php include './footer.php';?></div>
 </html>
