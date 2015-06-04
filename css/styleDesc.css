@@ -1,0 +1,88 @@
+#tbl 
+{
+    border: solid 3px red;
+    margin: 0 auto;
+}
+
+table
+{
+    margin: 0 auto;
+    border: black 3px solid; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding: 10px;
+
+}
+
+tr
+{
+    border: #008fbe 2px solid; 
+  padding: 0px; 
+
+}
+
+
+
+.info
+{
+    text-align: center;
+    border: #008fbe 2px solid; 
+  padding: 5px; 
+  font-family: fantasy; 
+
+}
+
+.tit
+{
+    font-size:20px;
+    text-align: center;
+    font-family: fantasy; 
+    margin-top: 5px;
+}
+
+.tit
+{
+    background-color: #008fbe;
+    text-align: center;
+}
+
+.nom
+{
+    background-color: #008fbe;
+    font-family: fantasy; 
+}
+
+h1
+{
+  text-align: CENTER;
+  font-family: fantasy; 
+  border-radius: 29px 29px 29px 29px;
+-moz-border-radius: 29px 29px 29px 29px;
+-webkit-border-radius: 29px 29px 29px 29px;
+border: 0px solid #000000;
+background:#e8e3d8;
+width: 1000px;
+height: 50px;
+margin: 0 auto;
+}
+
+a
+{
+    text-decoration: none;    
+   
+    color: black;
+    font-family: fantasy; 
+    
+}
+
+* {
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: #1dabb8;
+  font-family: fantasy; 
+}
