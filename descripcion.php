@@ -37,7 +37,7 @@ and open the template in the editor.
         <?php while($campos=mysqli_fetch_object($consulta)){?>
             
                 <tr> <td colspan="2" class="tit"> <?php echo $campos->nombre; ?></td> </tr>
-        <tr> <td colspan="2"> <img src="imgProductos/<?php echo $campos->foto;?>" </td></tr>
+                <tr> <td colspan="2"> <img src="imgProductos/<?php echo $campos->foto;?>" width="600px" height="500px"> </td></tr>
          <tr><td class="nom">Descripcion: </td> <td class="info"><?php echo $campos->descripcion; ?></td></tr>
          <tr><td class="nom">Cantidad disponible: </td> <td class="info"><?php echo $campos->cantidad; ?></td></tr>
          <tr><td class="nom">precio: </td> <td class="info"><?php echo $campos->presioVenta; ?></td></tr>

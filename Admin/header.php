@@ -36,6 +36,7 @@ if(!isset($_SESSION["admins"]))
     <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" />
         <div id="banner">
             <img id="log" src="../img/logo.png">
+            <img id="bann" src="../img/banner.png">
             <div id="prue">
             <p> <?php if (!isset($_SESSION["admins"])) {
 			echo "Invitado";}else {echo $_SESSION["admins"];} ?> </p>
@@ -49,7 +50,7 @@ if(!isset($_SESSION["admins"]))
             <li><a href="categoria.php"><span class="segundo"><i class="icon icon-tag"></i></span>Categorias</a></li>
             <li><a href="productos.php"><span class="tercero"><i class="icon icon-suitcase"></i></span>Productos</a></li>
             <li><a href="usuarios.php"><span class="cuarto"><i class="icon icon-text"></i></span>Usuarios</a></li>
-            <li><a href="contato.php"><span class="quinto"><i class="icon icon-mail"></i></span>Historial de compras</a></li>
+            <li><a href="admins.php"><span class="quinto"><i class="icon icon-mail"></i></span>Administradores</a></li>
             <li><a href="#"><span class="tercero"><i class="icon icon-suitcase"></i></span>Inicio sesion Administrador</a>
                 <ul>
                     <form  action="index.php" method="post">
@@ -62,7 +63,15 @@ if(!isset($_SESSION["admins"]))
                 </ul>  
             </li>
             <li><a href="#"><span class="quinto"><i class="icon icon-text"></i></span><?php if (!isset($_SESSION["admins"])) {
-            echo "Invalido";}else {echo $_SESSION["admins"];} ?></a></li>           
+            echo "Invalido";}else {echo $_SESSION["admins"];} ?></a>
+                <ul>
+
+                    
+                                        <form  action="logout.php" method="post">
+                                        <li><input type="submit" name="submit" value="salir" class="bt_cssn" width="800px" /></li>
+                                        </form>
+               </ul>
+            </li>           
             </ul>
         </nav>
     </div>

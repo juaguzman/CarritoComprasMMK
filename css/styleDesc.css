@@ -50,6 +50,7 @@ tr
 {
     background-color: #008fbe;
     font-family: fantasy; 
+    text-align: center;
 }
 
 h1
@@ -71,7 +72,7 @@ a
     text-decoration: none;    
    
     color: black;
-    font-family: fantasy; 
+   
     
 }
 
@@ -84,5 +85,5 @@ a
 
 a:hover {
   color: #1dabb8;
-  font-family: fantasy; 
+ 
 }
