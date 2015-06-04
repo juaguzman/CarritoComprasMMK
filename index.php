@@ -56,8 +56,9 @@ include 'conex.php';
                 <img src="img/envios.PNG"/>
             </div>
         </div>
+        <div id="foot"><?php include './footer.php';?></div>
+         
     </body>
-        
-        
+       
 </html>
 
